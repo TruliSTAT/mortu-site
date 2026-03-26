@@ -66,9 +66,9 @@
   --text: #2c2420;
   --text-muted: #8a7060;
   --text-faint: #b8a090;
-  --accent: #b85c38;
-  --accent-hover: #9e4d2f;
-  --accent-subtle: rgba(184,92,56,0.08);
+  --accent: #4a7c59;
+  --accent-hover: #3a6849;
+  --accent-subtle: rgba(74,124,89,0.08);
   --card-bg: #fdfaf6;
   --card-border: #e0d6ca;
   --nav-bg: rgba(250,247,242,0.92);
@@ -76,7 +76,7 @@
   --headline-font: 'Playfair Display', serif;
   --body-font: 'Lato', sans-serif;
   --logo-mortu: #2c2420;
-  --logo-pro: #b85c38;
+  --logo-pro: #4a7c59;
   --grain-opacity: 0.04;
   --hero-overlay: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,92,56,0.05) 0%, transparent 70%);
   --stat-border: #e0d6ca;
@@ -86,15 +86,15 @@
   --shadow-card-hover: 0 8px 32px rgba(184,92,56,0.12), 0 2px 8px rgba(44,36,32,0.08);
   --quiz-tile-bg: #fdfaf6;
   --quiz-tile-border: #e0d6ca;
-  --quiz-tile-active: #b85c38;
+  --quiz-tile-active: #4a7c59;
   --chat-bg: #fdfaf6;
   --chat-shadow: 0 8px 40px rgba(44,36,32,0.12);
   --footer-bg: #2c2420;
   --footer-text: #c8b4a0;
   --pricing-highlight: rgba(184,92,56,0.05);
-  --pricing-highlight-border: #b85c38;
+  --pricing-highlight-border: #4a7c59;
   --badge-bg: rgba(184,92,56,0.10);
-  --badge-text: #9e4d2f;
+  --badge-text: #3a6849;
 }
 
 /* ── Reset ── */
