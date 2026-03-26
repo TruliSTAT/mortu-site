@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — MortuPro</title>
+  <meta name="description" content="Simple, transparent pricing for funeral transport operations. Foundational $149/mo, Professional $249/mo, Elite $449/mo. 30-day free trial.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    /* Comparison table */
+    .compare-table {
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--body-font);
+    }
+    .compare-table th, .compare-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.9rem;
+    }
+    .compare-table th {
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--bg-alt);
+    }
+    .compare-table th.featured-col {
+      color: var(--accent);
+      background: var(--pricing-highlight);
+    }
+    .compare-table td.featured-col {
+      background: var(--pricing-highlight);
+    }
+    .compare-table td:not(:first-child) {
+      text-align: center;
+    }
+    .compare-table th:not(:first-child) {
+      text-align: center;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .row-header {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.875rem;
+    }
+    .compare-table .check-yes { color: var(--accent); font-weight: 700; }
+    .compare-table .check-no { color: var(--text-faint); }
+    .compare-table .section-row td {
+      background: var(--bg-alt2);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+    }
+    .compare-wrap { overflow-x: auto; }
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .faq-item h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-family: var(--body-font);
+    }
+    .faq-item p { font-size: 0.9rem; }
+    @media (max-width: 600px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">MORTU<span class="pro">PRO</span></a>
+    <ul class="nav-links">
+      <li><a href="features.html">Features</a></li>
+      <li><a href="pricing.html" style="color:var(--text)">Pricing</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost btn-sm" data-demo-trigger>Request Demo</a>
+      <a href="https://firstcallremovals.com/onboard" class="btn btn-primary btn-sm" target="_blank">Start Free Trial</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="features.html">Features</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="index.html#how-it-works">How It Works</a>
+  <a href="about.html">About</a>
+  <a href="#" data-demo-trigger>Request Demo</a>
+  <a href="https://firstcallremovals.com/onboard" target="_blank" style="color:var(--accent)">Start Free Trial →</a>
+</div>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-label">Pricing</p>
+    <h1>Simple, honest pricing</h1>
+    <p>No contracts. No setup fees. No surprises. A 30-day free trial on every plan — no credit card required.</p>
+  </div>
+</section>
+
+<!-- ── Pricing Cards ── -->
+<section class="section">
+  <div class="container">
+    <div class="pricing-grid">
+
+      <div class="pricing-card fade-up">
+        <p class="pricing-tier">Foundational</p>
+        <div class="pricing-price">
+          <span class="currency">$</span>
+          <span class="amount">149</span>
+          <span class="period">/mo</span>
+        </div>
+        <p class="pricing-desc">For small operations getting started. Everything you need to run clean, organized transport.</p>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="check">✓</span> 75 transports/month</li>
+          <li class="pricing-feature"><span class="check">✓</span> 2 driver accounts</li>
+          <li class="pricing-feature"><span class="check">✓</span> Smart intake (email + fax parsing)</li>
+          <li class="pricing-feature"><span class="check">✓</span> Basic billing & invoicing</li>
+          <li class="pricing-feature"><span class="check">✓</span> Email dispatch alerts</li>
+          <li class="pricing-feature"><span class="check">✓</span> Driver mobile app</li>
+          <li class="pricing-feature"><span class="check">✓</span> Operations dashboard</li>
+          <li class="pricing-feature"><span class="check">✓</span> 30-day free trial</li>
+        </ul>
+        <a href="https://firstcallremovals.com/onboard?plan=foundational" class="btn btn-ghost" target="_blank">Start Free Trial</a>
+      </div>
+
+      <div class="pricing-card featured fade-up">
+        <span class="pricing-badge">⭐ Most Popular</span>
+        <p class="pricing-tier">Professional</p>
+        <div class="pricing-price">
+          <span class="currency">$</span>
+          <span class="amount">249</span>
+          <span class="period">/mo</span>
+        </div>
+        <p class="pricing-desc">The full platform. Most growing operations choose this and never look back.</p>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="check">✓</span> 200 transports/month</li>
+          <li class="pricing-feature"><span class="check">✓</span> Unlimited driver accounts</li>
+          <li class="pricing-feature"><span class="check">✓</span> Everything in Foundational</li>
+          <li class="pricing-feature"><span class="check">✓</span> SMS + voice call escalation</li>
+          <li class="pricing-feature"><span class="check">✓</span> Square payment processing</li>
+          <li class="pricing-feature"><span class="check">✓</span> Full billing suite (auto rate card)</li>
+          <li class="pricing-feature"><span class="check">✓</span> Third party forwarding</li>
+          <li class="pricing-feature"><span class="check">✓</span> 30-day free trial</li>
+        </ul>
+        <a href="https://firstcallremovals.com/onboard?plan=professional" class="btn btn-primary" target="_blank">Start Free Trial →</a>
+      </div>
+
+      <div class="pricing-card fade-up">
+        <p class="pricing-tier">Elite</p>
+        <div class="pricing-price">
+          <span class="currency">$</span>
+          <span class="amount">449</span>
+          <span class="period">/mo</span>
+        </div>
+        <p class="pricing-desc">For high-volume fleets and multi-location operations that need the full suite with white glove support.</p>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="check">✓</span> Unlimited transports</li>
+          <li class="pricing-feature"><span class="check">✓</span> Unlimited drivers</li>
+          <li class="pricing-feature"><span class="check">✓</span> Everything in Professional</li>
+          <li class="pricing-feature"><span class="check">✓</span> Custom branding & portal domain</li>
+          <li class="pricing-feature"><span class="check">✓</span> Priority support (2hr response)</li>
+          <li class="pricing-feature"><span class="check">✓</span> Multi-vehicle fleet tracking</li>
+          <li class="pricing-feature"><span class="check">✓</span> Dedicated onboarding session</li>
+          <li class="pricing-feature"><span class="check">✓</span> 30-day free trial</li>
+        </ul>
+        <a href="https://firstcallremovals.com/onboard?plan=elite" class="btn btn-ghost" target="_blank">Start Free Trial</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Comparison Table ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Feature Comparison</p>
+      <h2>See what's included</h2>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Foundational</th>
+            <th class="featured-col">Professional ⭐</th>
+            <th>Elite</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-row"><td colspan="4">Volume & Capacity</td></tr>
+          <tr>
+            <td class="row-header">Transports/month</td>
+            <td>75</td>
+            <td class="featured-col">200</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td class="row-header">Driver accounts</td>
+            <td>2</td>
+            <td class="featured-col">Unlimited</td>
+            <td>Unlimited</td>
+          </tr>
+
+          <tr class="section-row"><td colspan="4">Dispatch & Intake</td></tr>
+          <tr>
+            <td class="row-header">Smart Intake (email/fax parsing)</td>
+            <td class="check-yes">✓</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Driver mobile app</td>
+            <td class="check-yes">✓</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Email dispatch alerts</td>
+            <td class="check-yes">✓</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">SMS escalation (1-min)</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Voice call escalation (2-min)</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Third party forwarding</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+
+          <tr class="section-row"><td colspan="4">Billing & Payments</td></tr>
+          <tr>
+            <td class="row-header">Basic invoicing</td>
+            <td class="check-yes">✓</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Auto rate card billing</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Square payment processing</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Revenue reporting</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+
+          <tr class="section-row"><td colspan="4">Enterprise</td></tr>
+          <tr>
+            <td class="row-header">Custom branding</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-no">—</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Multi-vehicle fleet tracking</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-no">—</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Priority support</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-no">—</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">Dedicated onboarding</td>
+            <td class="check-no">—</td>
+            <td class="featured-col check-no">—</td>
+            <td class="check-yes">✓</td>
+          </tr>
+          <tr>
+            <td class="row-header">30-day free trial</td>
+            <td class="check-yes">✓</td>
+            <td class="featured-col check-yes">✓</td>
+            <td class="check-yes">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Common Questions</p>
+      <h2>Pricing FAQ</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item fade-up">
+        <h4>Is there really no credit card required?</h4>
+        <p>Correct. Start your 30-day free trial with just your email. No card until you decide to continue.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <h4>What happens if I exceed my monthly transport limit?</h4>
+        <p>We'll notify you when you're close. You can upgrade instantly or we'll prorate additional transport volume. We never cut you off mid-month.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <h4>Can I change plans anytime?</h4>
+        <p>Yes. Upgrade or downgrade at any time. Changes take effect on your next billing cycle. No penalties, no locked-in contracts.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <h4>Do you offer annual billing discounts?</h4>
+        <p>Yes — annual billing saves 2 months (roughly 17% off). Contact us after signup to switch to annual billing.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <h4>What payment methods do you accept?</h4>
+        <p>All major credit/debit cards via Stripe. ACH bank transfer available on Elite plans.</p>
+      </div>
+      <div class="faq-item fade-up">
+        <h4>Is there a setup fee?</h4>
+        <p>No setup fees on any plan. Professional and Elite include guided onboarding at no extra cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <p class="section-label">Start Today</p>
+    <h2>30 days free.<br>No card needed.</h2>
+    <p>Get your operation running on MortuPro in under an hour. Full platform access from day one.</p>
+    <div class="hero-cta">
+      <a href="https://firstcallremovals.com/onboard" class="btn btn-primary btn-lg" target="_blank">Start Free Trial →</a>
+      <a href="#" class="btn btn-ghost btn-lg" data-demo-trigger>Talk to Us First</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">MORTU<span class="pro">PRO</span></a>
+        <p class="footer-tagline">The operating system for funeral transport. Built by operators, for operators.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://firstcallremovals.com" target="_blank">First Call Removals</a></li>
+            <li><a href="#" data-demo-trigger>Request Demo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 MortuPro. All rights reserved.</p>
+      <p class="footer-powered">Powered by <a href="https://firstcallremovals.com" target="_blank">First Call Removals</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-bubble-trigger" id="chat-trigger" aria-label="Chat with us">💬</button>
+<div class="chat-window" id="chat-window" role="dialog" aria-label="Chat support">
+  <div class="chat-header">
+    <div class="chat-avatar">🕊️</div>
+    <div class="chat-header-info">
+      <div class="name">MortuPro Support</div>
+      <div class="status">● Online now</div>
+    </div>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-options" id="chat-options"></div>
+</div>
+
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal">
+    <button class="modal-close" id="demo-modal-close" aria-label="Close">✕</button>
+    <p class="section-label">Request a Demo</p>
+    <h3>See MortuPro in action</h3>
+    <p>Tell us about your operation and we'll reach out within a few hours.</p>
+    <form id="demo-form" action="https://formspree.io/f/xlgodrwr" method="POST">
+      <div class="form-group">
+        <label class="form-label" for="demo-name">Your Name</label>
+        <input type="text" id="demo-name" name="name" class="form-control" placeholder="Tommy Morgado" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demo-email">Email Address</label>
+        <input type="email" id="demo-email" name="email" class="form-control" placeholder="tommy@example.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demo-type">Operation Type</label>
+        <select id="demo-type" name="operation_type" class="form-control form-select">
+          <option value="">Select type</option>
+          <option value="funeral-home">Funeral Home</option>
+          <option value="crematory">Crematory</option>
+          <option value="transport">Transport Company</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Request Demo →</button>
+    </form>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

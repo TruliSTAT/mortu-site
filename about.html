@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — MortuPro</title>
+  <meta name="description" content="MortuPro is built by First Call Removals — a real funeral transport company in Southeast Texas. We built what we wished existed.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .timeline {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      opacity: 0.4;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .timeline-dot {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .timeline-content h3 { margin-bottom: 8px; }
+    .timeline-content p { font-size: 0.9rem; }
+    .values-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .value-card .icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+    .value-card h3 { margin-bottom: 8px; }
+    .value-card p { font-size: 0.9rem; }
+    .contact-section {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact-options {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    @media (max-width: 600px) {
+      .timeline::before { left: 20px; }
+      .timeline-dot { width: 40px; height: 40px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">MORTU<span class="pro">PRO</span></a>
+    <ul class="nav-links">
+      <li><a href="features.html">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="about.html" style="color:var(--text)">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost btn-sm" data-demo-trigger>Request Demo</a>
+      <a href="https://firstcallremovals.com/onboard" class="btn btn-primary btn-sm" target="_blank">Start Free Trial</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="features.html">Features</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="index.html#how-it-works">How It Works</a>
+  <a href="about.html">About</a>
+  <a href="#" data-demo-trigger>Request Demo</a>
+  <a href="https://firstcallremovals.com/onboard" target="_blank" style="color:var(--accent)">Start Free Trial →</a>
+</div>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-label">Our Story</p>
+    <h1>Built by operators,<br>for operators.</h1>
+    <p>We didn't build MortuPro because we saw a market opportunity. We built it because we needed it ourselves — and nothing else existed.</p>
+  </div>
+</section>
+
+<!-- ── Story ── -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p class="section-label">The Origin</p>
+        <h2>We are the customer.</h2>
+        <p>First Call Removals is a funeral transport company based in Southeast Texas. We handle removals for funeral homes, crematories, and medical facilities across the region — 24 hours a day, 7 days a week.</p>
+        <p>When we started, we used a combination of group texts, spreadsheets, and manual invoicing to run the operation. It worked — until it didn't. Missed calls at 3 AM. Invoices never sent. Drivers who didn't know the pickup address until the last minute.</p>
+        <p>We looked for software. We tried what was available. Most tools were built for funeral homes, not transport companies. The ones that existed were outdated, clunky, or priced for enterprise customers.</p>
+        <p>So we built what we wished existed. That software became MortuPro.</p>
+        <p>Today, First Call Removals runs on MortuPro for every single transport. We are the first customer, the most demanding tester, and the loudest advocate. Every feature you see is something we use ourselves.</p>
+      </div>
+      <div class="about-visual fade-up">
+        <div class="about-stat">
+          <span class="num" data-count="127">127</span>
+          <span class="desc">Operations currently on MortuPro</span>
+        </div>
+        <div class="about-stat">
+          <span class="num" data-count="4200" data-suffix="+">4,200+</span>
+          <span class="desc">Transports processed on the platform</span>
+        </div>
+        <div class="about-stat" style="margin-bottom:0">
+          <span class="num">Day 1</span>
+          <span class="desc">FCR still runs on MortuPro — every transport, every day</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Timeline ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Timeline</p>
+      <h2>How we got here</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot">🚐</div>
+        <div class="timeline-content">
+          <h3>First Call Removals founded</h3>
+          <p>Tommy Morgado starts FCR as a funeral transport company in Southeast Texas. Running on group texts and spreadsheets. Works well enough — for now.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot">💡</div>
+        <div class="timeline-content">
+          <h3>The problem becomes obvious</h3>
+          <p>A missed call at 2 AM. An invoice never sent. A driver who navigated to the wrong hospital. It's clear the operation needs real software — and nothing on the market fits.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot">🔧</div>
+        <div class="timeline-content">
+          <h3>First internal version built</h3>
+          <p>We build a basic dispatch system just for FCR. Smart intake, SMS alerts, a driver mobile link. It's rough but it works. The team loves it immediately.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot">🚀</div>
+        <div class="timeline-content">
+          <h3>MortuPro launches publicly</h3>
+          <p>After refining the platform on FCR's real operations for months, we open it to other funeral transport companies. The response validates everything.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up" style="margin-bottom:0">
+        <div class="timeline-dot">📈</div>
+        <div class="timeline-content">
+          <h3>127 operations and counting</h3>
+          <p>Today MortuPro serves funeral homes, crematories, and transport companies across the country. FCR still runs on it every single day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Values ── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">What We Believe</p>
+      <h2>How we build</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-up">
+        <span class="icon">🎯</span>
+        <h3>Operators first</h3>
+        <p>Every feature starts with a real problem we faced at First Call Removals. No feature theater. No enterprise checkbox items. Only what operators actually need.</p>
+      </div>
+      <div class="value-card fade-up">
+        <span class="icon">⚡</span>
+        <h3>Speed is dignity</h3>
+        <p>When a family calls, minutes matter. Our software is built around response time — not because it's a KPI, but because it's respect for the families being served.</p>
+      </div>
+      <div class="value-card fade-up">
+        <span class="icon">🛡️</span>
+        <h3>Reliability over features</h3>
+        <p>This software runs at 3 AM when something goes wrong. We'd rather have six features that work perfectly than sixty that sometimes fail.</p>
+      </div>
+      <div class="value-card fade-up">
+        <span class="icon">📞</span>
+        <h3>Real support</h3>
+        <p>When you reach out, you talk to someone who runs a transport operation. We understand your problem because we've had it ourselves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Team Quote ── -->
+<section class="section trust-section">
+  <div class="container">
+    <div class="trust-inner">
+      <p class="section-label">Our Commitment</p>
+      <blockquote class="trust-quote">
+        "FCR is our proof of concept. Every feature you see is something we use ourselves. When something breaks at 3 AM, I'm the one who gets the call — and then I fix it so no one ever gets that call again."
+      </blockquote>
+      <p class="trust-byline">— Tommy Morgado, Founder &amp; Director · <strong>First Call Removals &amp; MortuPro</strong></p>
+      <div class="trust-badge">
+        <span class="dot"></span>
+        FCR is live on MortuPro right now — processing real transports daily
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="contact-section">
+      <p class="section-label">Get In Touch</p>
+      <h2>Let's talk</h2>
+      <p style="margin-bottom:0">Whether you want to see a demo, ask a question, or just find out if MortuPro is right for your operation — we're genuinely happy to talk.</p>
+      <div class="contact-options">
+        <a href="#" class="btn btn-primary btn-lg" data-demo-trigger>Request a Demo</a>
+        <a href="https://firstcallremovals.com/onboard" class="btn btn-ghost btn-lg" target="_blank">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">MORTU<span class="pro">PRO</span></a>
+        <p class="footer-tagline">The operating system for funeral transport. Built by operators, for operators.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://firstcallremovals.com" target="_blank">First Call Removals</a></li>
+            <li><a href="#" data-demo-trigger>Request Demo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 MortuPro. All rights reserved.</p>
+      <p class="footer-powered">Powered by <a href="https://firstcallremovals.com" target="_blank">First Call Removals</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-bubble-trigger" id="chat-trigger" aria-label="Chat with us">💬</button>
+<div class="chat-window" id="chat-window" role="dialog" aria-label="Chat support">
+  <div class="chat-header">
+    <div class="chat-avatar">🕊️</div>
+    <div class="chat-header-info">
+      <div class="name">MortuPro Support</div>
+      <div class="status">● Online now</div>
+    </div>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-options" id="chat-options"></div>
+</div>
+
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal">
+    <button class="modal-close" id="demo-modal-close" aria-label="Close">✕</button>
+    <p class="section-label">Request a Demo</p>
+    <h3>See MortuPro in action</h3>
+    <p>Tell us about your operation and we'll reach out within a few hours.</p>
+    <form id="demo-form" action="https://formspree.io/f/xlgodrwr" method="POST">
+      <div class="form-group">
+        <label class="form-label" for="demo-name">Your Name</label>
+        <input type="text" id="demo-name" name="name" class="form-control" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demo-email">Email Address</label>
+        <input type="email" id="demo-email" name="email" class="form-control" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demo-type">Operation Type</label>
+        <select id="demo-type" name="operation_type" class="form-control form-select">
+          <option value="">Select type</option>
+          <option value="funeral-home">Funeral Home</option>
+          <option value="crematory">Crematory</option>
+          <option value="transport">Transport Company</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Request Demo →</button>
+    </form>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

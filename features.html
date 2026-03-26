@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — MortuPro</title>
+  <meta name="description" content="Smart dispatch, auto-billing, driver tracking, smart intake, third party forwarding, and a real-time operations dashboard. Built for funeral transport.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .feature-deep {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .feature-deep.reverse { direction: rtl; }
+    .feature-deep.reverse > * { direction: ltr; }
+    .feature-visual {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--accent-subtle);
+      opacity: 0.5;
+    }
+    .feature-visual-content { position: relative; z-index: 1; }
+    .feature-visual .big-icon {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .mock-dispatch {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .mock-call {
+      background: var(--bg-alt);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      font-family: var(--body-font);
+    }
+    .mock-call .call-info { color: var(--text); font-weight: 600; }
+    .mock-call .call-status {
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    .status-new { background: var(--accent-subtle); color: var(--accent); }
+    .status-accepted { background: rgba(34,197,94,0.1); color: #22c55e; }
+    .status-escalated { background: rgba(239,68,68,0.1); color: #ef4444; }
+    .mock-invoice {
+      background: var(--bg-alt);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      font-family: var(--body-font);
+    }
+    .mock-invoice .inv-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .mock-invoice .inv-line:last-child { border-bottom: none; font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+    .feature-text h2 { margin-bottom: 16px; }
+    .feature-text p { margin-bottom: 16px; }
+    .feature-text .feature-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .feature-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-family: var(--body-font);
+      color: var(--text-muted);
+    }
+    .feature-bullet .check { color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    @media (max-width: 768px) {
+      .feature-deep { grid-template-columns: 1fr; gap: 40px; }
+      .feature-deep.reverse { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">MORTU<span class="pro">PRO</span></a>
+    <ul class="nav-links">
+      <li><a href="features.html" style="color:var(--text)">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost btn-sm" data-demo-trigger>Request Demo</a>
+      <a href="https://firstcallremovals.com/onboard" class="btn btn-primary btn-sm" target="_blank">Start Free Trial</a>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="features.html">Features</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="index.html#how-it-works">How It Works</a>
+  <a href="about.html">About</a>
+  <a href="#" data-demo-trigger>Request Demo</a>
+  <a href="https://firstcallremovals.com/onboard" target="_blank" style="color:var(--accent)">Start Free Trial →</a>
+</div>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-label">Platform Features</p>
+    <h1>Built for how funeral<br>transport actually works</h1>
+    <p>Six integrated systems, built by operators who use them daily. Every feature earns its place.</p>
+  </div>
+</section>
+
+<!-- ── Feature 1: Smart Dispatch ── -->
+<section class="section">
+  <div class="container">
+    <div class="feature-deep">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-content">
+          <span class="big-icon">🚨</span>
+          <div class="mock-dispatch">
+            <div class="mock-call">
+              <span class="call-info">Transport #1042 — 4:32 AM</span>
+              <span class="call-status status-new">New</span>
+            </div>
+            <div class="mock-call">
+              <span class="call-info">Transport #1041 — 4:18 AM</span>
+              <span class="call-status status-accepted">Accepted</span>
+            </div>
+            <div class="mock-call">
+              <span class="call-info">Transport #1040 — 3:52 AM</span>
+              <span class="call-status status-escalated">Escalated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-text fade-up">
+        <p class="section-label">Smart Dispatch</p>
+        <h2>No call ever<br>goes unanswered.</h2>
+        <p>The moment a transport comes in, every available driver is notified simultaneously. Not sequentially. Every driver. Right now.</p>
+        <p>If no one accepts within 60 seconds — it escalates. SMS at 1 minute. Voice call at 2 minutes. Supervisors notified at 3 minutes. The system handles it so you don't have to be awake at 3 AM.</p>
+        <div class="feature-bullets">
+          <div class="feature-bullet"><span class="check">✓</span> Simultaneous multi-driver notification</div>
+          <div class="feature-bullet"><span class="check">✓</span> Automatic SMS escalation at 1 minute</div>
+          <div class="feature-bullet"><span class="check">✓</span> Voice call escalation at 2 minutes</div>
+          <div class="feature-bullet"><span class="check">✓</span> Supervisor alert with full call details</div>
+          <div class="feature-bullet"><span class="check">✓</span> Full audit trail of all dispatch events</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Feature 2: Smart Intake ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="feature-deep reverse">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-content">
+          <span class="big-icon">📋</span>
+          <div style="background:var(--bg-alt);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:16px;font-family:var(--body-font);font-size:0.78rem;color:var(--text-muted);">
+            <div style="color:var(--text-faint);margin-bottom:10px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em">Forwarded Email — Parsed</div>
+            <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--card-border)"><span>Deceased Name</span><span style="color:var(--text);font-weight:600">John Smith</span></div>
+            <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--card-border)"><span>Pickup Location</span><span style="color:var(--text);font-weight:600">2401 E Main St</span></div>
+            <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--card-border)"><span>Destination</span><span style="color:var(--text);font-weight:600">Forest Park Cemetery</span></div>
+            <div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--card-border)"><span>Weight</span><span style="color:var(--text);font-weight:600">185 lbs</span></div>
+            <div style="display:flex;justify-content:space-between;padding:5px 0"><span>Funeral Home</span><span style="color:var(--accent);font-weight:600">✓ Auto-matched</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-text fade-up">
+        <p class="section-label">Smart Intake</p>
+        <h2>Forward an email.<br>Get a transport record.</h2>
+        <p>Your funeral home partners forward their removal call to your MortuPro email. That's it. Our AI parses every detail — name, pickup, destination, weight, special instructions — into a complete transport record in seconds.</p>
+        <p>No portal logins for clients. No re-typing data. No missed information. Just a clean transport ready to dispatch.</p>
+        <div class="feature-bullets">
+          <div class="feature-bullet"><span class="check">✓</span> Accepts forwarded email or fax</div>
+          <div class="feature-bullet"><span class="check">✓</span> AI extracts all transport fields</div>
+          <div class="feature-bullet"><span class="check">✓</span> Auto-matches to known funeral homes</div>
+          <div class="feature-bullet"><span class="check">✓</span> Flags missing or unclear information</div>
+          <div class="feature-bullet"><span class="check">✓</span> Ready to dispatch in &lt; 30 seconds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Feature 3: Auto-Billing ── -->
+<section class="section">
+  <div class="container">
+    <div class="feature-deep">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-content">
+          <span class="big-icon">💰</span>
+          <div class="mock-invoice">
+            <div class="inv-line"><span>Base transport fee</span><span>$175.00</span></div>
+            <div class="inv-line"><span>Mileage (28 mi × $1.20)</span><span>$33.60</span></div>
+            <div class="inv-line"><span>After-hours surcharge</span><span>$25.00</span></div>
+            <div class="inv-line"><span>Weight surcharge (&gt;200 lbs)</span><span>$15.00</span></div>
+            <div class="inv-line" style="border-top:1px solid var(--card-border);margin-top:4px;padding-top:8px"><span>Total</span><span>$248.60</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-text fade-up">
+        <p class="section-label">Auto-Billing</p>
+        <h2>Every transport, billed<br>automatically.</h2>
+        <p>Set up your rate card once — base fee, per-mile rate, after-hours premium, weight surcharges, whatever your structure is. When a transport closes, the invoice calculates and sends itself.</p>
+        <p>Collect via Square, or send a PDF invoice. Revenue reporting shows you exactly what's coming in and from which clients.</p>
+        <div class="feature-bullets">
+          <div class="feature-bullet"><span class="check">✓</span> Fully configurable rate card</div>
+          <div class="feature-bullet"><span class="check">✓</span> Auto-calculates on transport close</div>
+          <div class="feature-bullet"><span class="check">✓</span> Square payment collection built-in</div>
+          <div class="feature-bullet"><span class="check">✓</span> PDF invoice generation</div>
+          <div class="feature-bullet"><span class="check">✓</span> Revenue reporting by client/period</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Feature 4: Driver App ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="feature-deep reverse">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-content">
+          <span class="big-icon">🗺️</span>
+          <div style="display:flex;flex-direction:column;gap:10px;font-family:var(--body-font);">
+            <div style="display:flex;gap:10px;align-items:center;">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--accent-subtle);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">📱</div>
+              <div>
+                <div style="font-size:0.8rem;font-weight:700;color:var(--text)">Marcus T. — Driver</div>
+                <div style="font-size:0.72rem;color:var(--accent)">● Accepted Transport #1042</div>
+              </div>
+            </div>
+            <div style="background:var(--bg-alt);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:12px;font-size:0.78rem;color:var(--text-muted)">
+              <div style="color:var(--text);font-weight:600;margin-bottom:8px">Transport #1042</div>
+              <div style="margin-bottom:6px">📍 Pickup: Memorial Hermann, Bay City</div>
+              <div style="margin-bottom:12px">🏁 Drop: Forest Park, Beaumont</div>
+              <div style="display:flex;gap:8px">
+                <span style="background:rgba(34,197,94,0.1);color:#22c55e;padding:4px 12px;border-radius:100px;font-size:0.72rem;font-weight:700">En Route</span>
+                <span style="background:var(--accent-subtle);color:var(--accent);padding:4px 12px;border-radius:100px;font-size:0.72rem;font-weight:700">Navigate →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-text fade-up">
+        <p class="section-label">Driver App</p>
+        <h2>Zero friction for<br>your drivers.</h2>
+        <p>Drivers receive a text with a link. Tap to accept, view pickup details, navigate, and advance job status — all in their mobile browser. No app to download. No account to create.</p>
+        <p>Real-time status updates flow back to your dispatch board automatically. You always know where every job stands.</p>
+        <div class="feature-bullets">
+          <div class="feature-bullet"><span class="check">✓</span> Works on any mobile browser</div>
+          <div class="feature-bullet"><span class="check">✓</span> Accept, navigate, advance status</div>
+          <div class="feature-bullet"><span class="check">✓</span> Full transport details on screen</div>
+          <div class="feature-bullet"><span class="check">✓</span> Real-time status to dispatch board</div>
+          <div class="feature-bullet"><span class="check">✓</span> No app install required</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Feature 5: Third Party Forwarding ── -->
+<section class="section">
+  <div class="container">
+    <div class="feature-deep">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-content">
+          <span class="big-icon">🤝</span>
+          <div style="font-family:var(--body-font);font-size:0.8rem;">
+            <div style="color:var(--text-faint);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px">Forwarding Transport #1043</div>
+            <div style="background:var(--bg-alt);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:12px;margin-bottom:8px">
+              <div style="font-weight:700;color:var(--text);margin-bottom:4px">Gulf Coast Transport</div>
+              <div style="color:var(--text-muted)">Trusted partner · Galveston area</div>
+            </div>
+            <button style="width:100%;background:var(--accent);color:#0a0a0a;border:none;border-radius:var(--radius-sm);padding:10px;font-weight:700;font-family:var(--body-font);cursor:pointer;">Forward with Full Details →</button>
+            <div style="color:var(--text-faint);font-size:0.72rem;text-align:center;margin-top:8px">They'll receive all transport details by SMS</div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-text fade-up">
+        <p class="section-label">Third Party Forwarding</p>
+        <h2>Too busy? One tap<br>to a trusted partner.</h2>
+        <p>You've built relationships with other transport companies for a reason. When your team is stretched, forward any call to a trusted partner with one tap — they receive all the details instantly by SMS.</p>
+        <p>You stay in control of the client relationship. Your partner handles the transport. Everyone wins.</p>
+        <div class="feature-bullets">
+          <div class="feature-bullet"><span class="check">✓</span> Manage your vendor partner list</div>
+          <div class="feature-bullet"><span class="check">✓</span> One-tap forward from dispatch board</div>
+          <div class="feature-bullet"><span class="check">✓</span> Partner receives full transport details via SMS</div>
+          <div class="feature-bullet"><span class="check">✓</span> Job tracks in your dashboard as forwarded</div>
+          <div class="feature-bullet"><span class="check">✓</span> Client relationship stays with you</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Feature 6: Dashboard ── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="feature-deep reverse">
+      <div class="feature-visual fade-up">
+        <div class="feature-visual-content">
+          <span class="big-icon">📊</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-family:var(--body-font);">
+            <div style="background:var(--bg-alt);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:12px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:700;color:var(--accent);font-family:var(--headline-font)">12</div>
+              <div style="font-size:0.72rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.06em">Active Today</div>
+            </div>
+            <div style="background:var(--bg-alt);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:12px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:700;color:#22c55e;font-family:var(--headline-font)">$2,847</div>
+              <div style="font-size:0.72rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.06em">This Week</div>
+            </div>
+            <div style="background:var(--bg-alt);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:12px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:700;color:var(--text);font-family:var(--headline-font)">4</div>
+              <div style="font-size:0.72rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.06em">Drivers Online</div>
+            </div>
+            <div style="background:var(--bg-alt);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:12px;text-align:center">
+              <div style="font-size:1.6rem;font-weight:700;color:var(--accent);font-family:var(--headline-font)">98%</div>
+              <div style="font-size:0.72rem;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.06em">Acceptance Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-text fade-up">
+        <p class="section-label">Operations Dashboard</p>
+        <h2>Your entire operation,<br>one screen.</h2>
+        <p>Real-time dispatch board showing every active transport, driver status, and pending calls. Switch to calendar view to see the week ahead. Pull revenue reports in seconds.</p>
+        <p>No switching between apps. No spreadsheets. No guessing. Everything you need to run your operation, right in front of you.</p>
+        <div class="feature-bullets">
+          <div class="feature-bullet"><span class="check">✓</span> Real-time dispatch board</div>
+          <div class="feature-bullet"><span class="check">✓</span> Calendar view for scheduling</div>
+          <div class="feature-bullet"><span class="check">✓</span> Fleet status — who's available, where</div>
+          <div class="feature-bullet"><span class="check">✓</span> Revenue reporting by period and client</div>
+          <div class="feature-bullet"><span class="check">✓</span> Mobile-responsive — works on any device</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <p class="section-label">All Features Included</p>
+    <h2>Start using all of this<br>free for 30 days.</h2>
+    <p>Full platform access from day one. No credit card. No feature restrictions during trial.</p>
+    <div class="hero-cta">
+      <a href="https://firstcallremovals.com/onboard" class="btn btn-primary btn-lg" target="_blank">Start Free Trial →</a>
+      <a href="pricing.html" class="btn btn-ghost btn-lg">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">MORTU<span class="pro">PRO</span></a>
+        <p class="footer-tagline">The operating system for funeral transport. Built by operators, for operators.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://firstcallremovals.com" target="_blank">First Call Removals</a></li>
+            <li><a href="#" data-demo-trigger>Request Demo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 MortuPro. All rights reserved.</p>
+      <p class="footer-powered">Powered by <a href="https://firstcallremovals.com" target="_blank">First Call Removals</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-bubble-trigger" id="chat-trigger" aria-label="Chat with us">💬</button>
+<div class="chat-window" id="chat-window" role="dialog" aria-label="Chat support">
+  <div class="chat-header">
+    <div class="chat-avatar">🕊️</div>
+    <div class="chat-header-info">
+      <div class="name">MortuPro Support</div>
+      <div class="status">● Online now</div>
+    </div>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-options" id="chat-options"></div>
+</div>
+
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal">
+    <button class="modal-close" id="demo-modal-close" aria-label="Close">✕</button>
+    <p class="section-label">Request a Demo</p>
+    <h3>See MortuPro in action</h3>
+    <p>Tell us about your operation and we'll reach out within a few hours.</p>
+    <form id="demo-form" action="https://formspree.io/f/xlgodrwr" method="POST">
+      <div class="form-group">
+        <label class="form-label" for="demo-name">Your Name</label>
+        <input type="text" id="demo-name" name="name" class="form-control" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demo-email">Email Address</label>
+        <input type="email" id="demo-email" name="email" class="form-control" placeholder="your@email.com" required>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Request Demo →</button>
+    </form>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
