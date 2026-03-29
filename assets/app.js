@@ -14,7 +14,7 @@ const QUIZ_CONFIG = {
     param: 'funeral-home'
   },
   'crematory': {
-    emoji: '🔥',
+    emoji: '⚱️',
     label: 'Crematory',
     subline: 'Streamline every removal, track every transfer, and bill every family — built for crematories.',
     stat: '40+ crematories run on MortuPro',
@@ -200,7 +200,7 @@ function renderChatState() {
       setTimeout(() => {
         renderOptions([
           { text: '🕊️ Funeral Home', action: () => { chatState.opType = 'Funeral Home'; chatState.current = CHAT_STATES.QUALIFY_DRIVERS; renderChatState(); } },
-          { text: '🔥 Crematory', action: () => { chatState.opType = 'Crematory'; chatState.current = CHAT_STATES.QUALIFY_DRIVERS; renderChatState(); } },
+          { text: '⚱️ Crematory', action: () => { chatState.opType = 'Crematory'; chatState.current = CHAT_STATES.QUALIFY_DRIVERS; renderChatState(); } },
           { text: '🚐 Transport Company', action: () => { chatState.opType = 'Transport Company'; chatState.current = CHAT_STATES.QUALIFY_DRIVERS; renderChatState(); } }
         ]);
       }, 400);

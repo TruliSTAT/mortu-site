@@ -4,10 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing — MortuPro</title>
-  <meta name="description" content="Simple, transparent pricing for funeral transport operations. Foundational $149/mo, Professional $249/mo, Elite $399/mo. 30-day free trial.">
+  <meta name="description" content="Simple, transparent pricing for funeral transport operations. Foundational $149/mo, Professional $279/mo, Elite $399/mo. 14-day free trial.">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=3">
+  <style>
+    /* Founders pricing — inlined to prevent cache issues */
+    .pricing-original{display:flex;align-items:baseline;gap:4px;opacity:.45;text-decoration:line-through;text-decoration-thickness:2px;margin-bottom:6px}
+    .pricing-original .amount{font-size:2rem}
+    .pricing-original .currency{font-size:.9rem;padding-top:4px}
+    .pricing-original .period{font-size:.75rem}
+    .pricing-founders-row{display:flex;align-items:center;gap:14px;margin-bottom:4px}
+    .founders-banner{position:relative;display:inline-block;background:var(--accent);color:#fff;font-family:var(--body-font);font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px 4px 8px;clip-path:polygon(0 0,100% 4%,96% 50%,100% 96%,0 100%);transform:rotate(-1.5deg) skewX(-2deg);box-shadow:2px 3px 8px rgba(0,0,0,.18);white-space:nowrap;transform-origin:left center;filter:drop-shadow(1px 2px 3px rgba(0,0,0,.2))}
+    .founders-banner::before{content:'';position:absolute;left:-5px;top:50%;transform:translateY(-50%);width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:6px solid var(--accent)}
+    .founders-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.12) 0%,transparent 45%,rgba(0,0,0,.08) 100%);clip-path:inherit;pointer-events:none}
+    [data-theme="warm"] .founders-banner{background:#1a1a2e}
+    [data-theme="warm"] .founders-banner{background:#5c4a2a}
+    .pricing-tier-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+    .pricing-was{font-size:1.5rem;opacity:0.45;font-family:var(--headline-font);white-space:nowrap;font-weight:700;line-height:1}
+    .pricing-was s{text-decoration-thickness:2px}
+  </style>
   <style>
     /* Comparison table */
     .compare-table {
@@ -83,7 +99,7 @@
   </style>
 
   <meta property="og:title" content="Pricing — MortuPro" />
-  <meta property="og:description" content="Simple, transparent pricing for funeral transport operations. Foundational $149/mo, Professional $249/mo, Elite $399/mo. 30-day free trial." />
+  <meta property="og:description" content="Simple, transparent pricing for funeral transport operations. Foundational $149/mo, Professional $279/mo, Elite $399/mo. 14-day free trial." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="MortuPro" />
   <meta property="og:image" content="https://mortupro.com/assets/og-image.png" />
@@ -130,7 +146,7 @@
   <div class="page-hero-inner">
     <p class="section-label">Pricing</p>
     <h1>Simple, honest pricing</h1>
-    <p>No contracts. No setup fees. No surprises. A 30-day free trial on every plan — no credit card required.</p>
+    <p>No contracts. No setup fees. No surprises. A 14-day free trial on every plan — no credit card required.</p>
   </div>
 </section>
 
@@ -140,11 +156,17 @@
     <div class="pricing-grid">
 
       <div class="pricing-card fade-up">
-        <p class="pricing-tier">Foundational</p>
-        <div class="pricing-price">
-          <span class="currency">$</span>
-          <span class="amount">149</span>
-          <span class="period">/mo</span>
+        <div class="pricing-tier-row">
+          <p class="pricing-tier">Foundational</p>
+          <span class="pricing-was"><s>$199</s></span>
+        </div>
+        <div class="pricing-founders-row">
+          <div class="pricing-price" style="margin-bottom:0">
+            <span class="currency">$</span>
+            <span class="amount">149</span>
+            <span class="period">/mo</span>
+          </div>
+          <span class="founders-banner">Founders</span>
         </div>
         <p class="pricing-desc">For small operations getting started. Everything you need to run clean, organized transport.</p>
         <ul class="pricing-features">
@@ -155,18 +177,24 @@
           <li class="pricing-feature"><span class="check">✓</span> Email dispatch alerts</li>
           <li class="pricing-feature"><span class="check">✓</span> Driver mobile app</li>
           <li class="pricing-feature"><span class="check">✓</span> Operations dashboard</li>
-          <li class="pricing-feature"><span class="check">✓</span> 30-day free trial</li>
+          <li class="pricing-feature"><span class="check">✓</span> 14-day free trial</li>
         </ul>
         <a href="https://firstcallremovals.com/onboard?plan=foundational" class="btn btn-ghost" target="_blank">Start Free Trial</a>
       </div>
 
       <div class="pricing-card featured fade-up">
         <span class="pricing-badge">⭐ Most Popular</span>
-        <p class="pricing-tier">Professional</p>
-        <div class="pricing-price">
-          <span class="currency">$</span>
-          <span class="amount">249</span>
-          <span class="period">/mo</span>
+        <div class="pricing-tier-row">
+          <p class="pricing-tier">Professional</p>
+          <span class="pricing-was"><s>$349</s></span>
+        </div>
+        <div class="pricing-founders-row">
+          <div class="pricing-price" style="margin-bottom:0">
+            <span class="currency">$</span>
+            <span class="amount">279</span>
+            <span class="period">/mo</span>
+          </div>
+          <span class="founders-banner">Founders</span>
         </div>
         <p class="pricing-desc">The full platform. Most growing operations choose this and never look back.</p>
         <ul class="pricing-features">
@@ -177,17 +205,23 @@
           <li class="pricing-feature"><span class="check">✓</span> Square payment processing</li>
           <li class="pricing-feature"><span class="check">✓</span> Full billing suite (auto rate card)</li>
           <li class="pricing-feature"><span class="check">✓</span> Third party forwarding</li>
-          <li class="pricing-feature"><span class="check">✓</span> 30-day free trial</li>
+          <li class="pricing-feature"><span class="check">✓</span> 14-day free trial</li>
         </ul>
         <a href="https://firstcallremovals.com/onboard?plan=professional" class="btn btn-primary" target="_blank">Start Free Trial →</a>
       </div>
 
       <div class="pricing-card fade-up">
-        <p class="pricing-tier">Elite</p>
-        <div class="pricing-price">
-          <span class="currency">$</span>
-          <span class="amount">399</span>
-          <span class="period">/mo</span>
+        <div class="pricing-tier-row">
+          <p class="pricing-tier">Elite</p>
+          <span class="pricing-was"><s>$499</s></span>
+        </div>
+        <div class="pricing-founders-row">
+          <div class="pricing-price" style="margin-bottom:0">
+            <span class="currency">$</span>
+            <span class="amount">399</span>
+            <span class="period">/mo</span>
+          </div>
+          <span class="founders-banner">Founders</span>
         </div>
         <p class="pricing-desc">For high-volume fleets and multi-location operations that need the full suite with white glove support.</p>
         <ul class="pricing-features">
@@ -198,7 +232,7 @@
           <li class="pricing-feature"><span class="check">✓</span> Priority support (2hr response)</li>
           <li class="pricing-feature"><span class="check">✓</span> Multi-vehicle fleet tracking</li>
           <li class="pricing-feature"><span class="check">✓</span> Dedicated onboarding session</li>
-          <li class="pricing-feature"><span class="check">✓</span> 30-day free trial</li>
+          <li class="pricing-feature"><span class="check">✓</span> 14-day free trial</li>
         </ul>
         <a href="https://firstcallremovals.com/onboard?plan=elite" class="btn btn-ghost" target="_blank">Start Free Trial</a>
       </div>
@@ -329,7 +363,7 @@
             <td class="check-yes">✓</td>
           </tr>
           <tr>
-            <td class="row-header">30-day free trial</td>
+            <td class="row-header">14-day free trial</td>
             <td class="check-yes">✓</td>
             <td class="featured-col check-yes">✓</td>
             <td class="check-yes">✓</td>
@@ -350,7 +384,7 @@
     <div class="faq-grid">
       <div class="faq-item fade-up">
         <h4>Is there really no credit card required?</h4>
-        <p>Correct. Start your 30-day free trial with just your email. No card until you decide to continue.</p>
+        <p>Correct. Start your 14-day free trial with just your email. No card until you decide to continue.</p>
       </div>
       <div class="faq-item fade-up">
         <h4>What happens if I exceed my monthly transport limit?</h4>
@@ -380,7 +414,7 @@
 <section class="cta-banner">
   <div class="cta-banner-inner">
     <p class="section-label">Start Today</p>
-    <h2>30 days free.<br>No card needed.</h2>
+    <h2>14 days free.<br>No card needed.</h2>
     <p>Get your operation running on MortuPro in under an hour. Full platform access from day one.</p>
     <div class="hero-cta">
       <a href="https://firstcallremovals.com/onboard" class="btn btn-primary btn-lg" target="_blank">Start Free Trial →</a>
