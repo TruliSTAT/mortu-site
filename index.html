@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="warm">
-<head>
+<head><script>
+  (function() {
+    var h = window.location.hostname;
+    if (h === 'mortu.pro' || h === 'www.mortu.pro') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'warm');
+    }
+  })();
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MortuPro — The Operating System for Mortuary Transport</title>
